@@ -38,6 +38,14 @@ ul {
     background-color: red;
 }
 
+.rotate-90 {
+    -moz-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
 .p-base {
     padding: 0.625rem;
 }
@@ -93,10 +101,30 @@ ul {
 
 .menu {
     display: none;
+    height: 100%;
+    right: 0;
+    position: fixed;
+    background-color: antiquewhite;
+    top: 0;
+    transition: -webkit-transform .5s ease;
+    transition: transform .5s ease;
+    -webkit-transform: translateX(330px);
+    -ms-transform: translateX(330px);
+    transform: translateX(330px);
+    width: 250px;
+    
+}
+
+.menu.show {
+    display: block;
+    -webkit-transform: translateX(0%);
+    -ms-transform: translateX(0%);
+    transform: translateX(0%);
 }
 
 .svg-wrapper {
     padding: 0.2rem 1rem;
+    z-index: 1;
 }
 
 
@@ -123,9 +151,6 @@ ul {
     }
 }
 /* ------------------- Main header end ------------------- */
-
-
-
 
 
 
